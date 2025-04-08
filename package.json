@@ -1,0 +1,26 @@
+{
+  "name": "@venturan/vite-plugin-image-optimizer",
+  "version": "0.0.2",
+  "description": "",
+  "main": "dist/index.js",
+  "types": "dist/main.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup main.ts --dts --no-splitting"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "keywords": [],
+  "author": "vernturan",
+  "license": "ISC",
+  "dependencies": {
+    "sharp": "^0.34.1",
+    "tsup": "^8.4.0",
+    "typescript": "^5.8.3",
+    "vite": "^6.2.5"
+  }
+}

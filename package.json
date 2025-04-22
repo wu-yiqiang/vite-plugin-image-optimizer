@@ -1,26 +1,36 @@
 {
-  "name": "@venturan/vite-plugin-image-optimizer",
-  "version": "0.0.6",
+  "name": "vite-plugin-image-optimizer",
+  "version": "1.0.0",
   "description": "",
-  "main": "dist/main.js",
-  "types": "dist/main.d.ts",
-  "files": [
-    "dist"
-  ],
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/type.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs"
+    }
+  },
   "scripts": {
-    "build": "tsup main.ts --dts --no-splitting"
+    "dev": "vite dev example",
+    "build": "tsup"
   },
-  "publishConfig": {
-    "access": "public",
-    "registry": "https://registry.npmjs.org/"
-  },
-  "keywords": [],
-  "author": "vernturan",
+  "keywords": [
+    "vite-plugin-image-optimizer"
+  ],
+  "files": ["dist"],
+  "author": "",
   "license": "ISC",
   "dependencies": {
+    "@mistjs/eslint-config-vue": "^0.1.0",
+    "@mistjs/tsconfig-vue": "^1.1.2",
+    "@types/node": "^22.14.1",
+    "@vitejs/plugin-vue": "^5.2.3",
+    "eslint": "^9.25.1",
     "sharp": "^0.34.1",
     "tsup": "^8.4.0",
     "typescript": "^5.8.3",
-    "vite": "^6.2.5"
+    "vite": "^6.3.2",
+    "vue": "^3.5.13"
   }
 }
